@@ -32,6 +32,7 @@ on logs I configured and verified myself, not sample data.
 |---|---|---|---|
 | 1 | SSH Brute Force | T1110.001 | [detections/01-brute-force-ssh.md](detections/01-brute-force-ssh.md) |
 | 2 | PowerShell Encoded Command | T1059.001 | [detections/02-powershell-encoded-command.md](detections/02-powershell-encoded-command.md) |
+| 3 | Privilege Escalation (Local Admin Group) | T1098 | [detections/03-privilege-escalation.md](detections/03-privilege-escalation.md) |
 
 Each write-up includes the attack simulation, the log source and fields used, the
 full SPL detection logic with reasoning, a screenshot of the alert firing, and a
@@ -51,5 +52,7 @@ limitation I identified in my own detection.
 
 ## Status
 
-In progress. Next: a privilege escalation detection to complete the attack chain
-(initial access → execution → privilege escalation).
+Complete. Three attacks simulated end to end: initial access (brute force),
+execution (PowerShell abuse), and privilege escalation, each with its own
+working Splunk detection, a scheduled alert proven to fire, and a documented
+limitation.
